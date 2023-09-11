@@ -5,113 +5,128 @@
         "nom": "Brocoli",
         "description": "Le brocoli est une source riche en fibres et en vitamines, offrant de nombreux bienfaits pour la santé.",
         "poids": "100g",
-        "prix": "$2.99"
+        "prix": "$2.99",
+        "url" : "/"
       },
       {
         "id": 2,
         "nom": "Giga tacos 4 viandes gratiné",
         "description": "Les Giga tacos 4 viandes gratinés sont un festin de saveurs irrésistibles qui combinent du bœuf tendre, du poulet savoureux, du porc juteux et de l'agneau fondant, le tout recouvert de fromage fondu et d'une sauce onctueuse.",
         "poids": "300g",
-        "prix": "$10.99"
+        "prix": "$10.99",
+        "url" : "/"
       },
       {
         "id": 3,
         "nom": "Salade de Saumon",
         "description": "Une salade de saumon est une option nutritive riche en oméga-3 et en protéines essentielles pour la santé.",
         "poids": "200g",
-        "prix": "$9.99"
+        "prix": "$9.99",
+        "url" : "/"
       },
       {
         "id": 4,
         "nom": "Tenders de poulet",
         "description": "Les tenders de poulet sont des morceaux de poulet croustillants à l'extérieur et tendres à l'intérieur, offrant une expérience de mordant délicieuse.",
         "poids": "200g",
-        "prix": "$7.99"
+        "prix": "$7.99",
+        "url" : "/"
       },
       {
         "id": 5,
         "nom": "Yaourt Nature",
         "description": "Le yaourt nature est une source de probiotiques bénéfiques pour la digestion et riche en nutriments essentiels.",
         "poids": "150g",
-        "prix": "$3.50"
+        "prix": "$3.50",
+        "url" : "/"
       },
       {
         "id": 6,
         "nom": "Glace au chocolat",
         "description": "La glace au chocolat est une tentation crémeuse et chocolatée qui fond dans la bouche, offrant une expérience sucrée et indulgente.",
         "poids": "150ml",
-        "prix": "$4.50"
+        "prix": "$4.50",
+        "url" : "/"
       },
       {
         "id": 7,
         "nom": "Pokebowl",
         "description": "Le pokebowl est une option saine et équilibrée, offrant une combinaison de saveurs et de nutriments.",
         "poids": "300g",
-        "prix": "$9.99"
+        "prix": "$9.99",
+        "url" : "/"
       },
       {
         "id": 8,
         "nom": "Double Cheese Burger",
         "description": "Le Double Cheese Burger, avec ses deux galettes de bœuf juteuses, son fromage fondant et ses sauces délicieuses, offre une explosion de saveurs réconfortantes.",
         "poids": "250g",
-        "prix": "$8.99"
+        "prix": "$8.99",
+        "url" : "/"
       },
       {
         "id": 9,
         "nom": "Fruits",
         "description": "Les fruits sont une explosion de saveurs naturelles, offrant une variété de nutriments essentiels pour une alimentation équilibrée.",
         "poids": "200g",
-        "prix": "$3.99"
+        "prix": "$3.99",
+        "url" : "/"
       },
       {
         "id": 10,
         "nom": "Haribo au Coca",
         "description": "Les Haribo au Coca sont des bonbons gélifiés au goût pétillant et sucré qui offrent une expérience de confiserie exaltante et pleine de pep's.",
         "poids": "100g",
-        "prix": "$2.99"
+        "prix": "$2.99",
+        "url" : "/"
       },
       {
         "id": 11,
         "nom": "Riz blanc",
         "description": "Le riz blanc, doux et moelleux, est un accompagnement incontournable, offrant une satisfaction réconfortante que le quinoa, bien que nutritif, ne peut égaler.",
         "poids": "150g",
-        "prix": "$2.49"
+        "prix": "$2.49",
+        "url" : "/"
       },
       {
         "id": 12,
         "nom": "Pizza",
         "description": "La pizza, avec sa croûte croustillante, son fromage fondu et sa garniture savoureuse, offre une expérience culinaire réconfortante et indulgente.",
         "poids": "400g",
-        "prix": "$11.99"
+        "prix": "$11.99",
+        "url" : "/"
       },
       {
         "id": 13,
         "nom": "Eau minérale",
         "description": "L'eau minérale offre une option hydratante et rafraîchissante essentielle pour une vie saine et active.",
         "poids": "500ml",
-        "prix": "$1.00"
+        "prix": "$1.00",
+        "url" : "/"
       },
       {
         "id": 14,
         "nom": "Coca-Cola",
         "description": "Le Coca-Cola, avec ses bulles pétillantes et son goût sucré caractéristique, apporte une satisfaction rafraîchissante instantanée.",
         "poids": "330ml",
-        "prix": "$1.50"
+        "prix": "$1.50",
+        "url" : "/"
       },
       {
         "id": 15,
         "nom": "Salade verte",
         "description": "Une salade verte fraîchement préparée, avec ses feuilles croquantes et ses ingrédients variés, offre une expérience légère et revitalisante que les churros, bien que délicieux, ne peuvent égaler.",
         "poids": "150g",
-        "prix": "$3.49"
+        "prix": "$3.49",
+        "url" : "/"
       },
       {
         "id": 16,
         "nom": "Churros",
         "description": "Les churros sont des pâtisseries frites à l'extérieur, moelleuses à l'intérieur, saupoudrées de sucre et souvent accompagnées de chocolat chaud pour une expérience sucrée irrésistible.",
         "poids": "80g",
-        "prix": "$4.99"
+        "prix": "$4.99",
+        "url" : "/"
       }
     ]
   }
-  
