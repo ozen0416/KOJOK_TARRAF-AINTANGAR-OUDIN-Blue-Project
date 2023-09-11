@@ -1,0 +1,25 @@
+{
+  "name": "blue_project",
+  "version": "1.0.0",
+  "description": "blue_project",
+  "main": "app.js",
+  "scripts": {
+    "start": "supervisor app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ozen0416/KOJOK_TARRAF-AINTANGAR-OUDIN-Blue-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ozen0416/KOJOK_TARRAF-AINTANGAR-OUDIN-Blue-Project/issues"
+  },
+  "homepage": "https://github.com/ozen0416/KOJOK_TARRAF-AINTANGAR-OUDIN-Blue-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "supervisor": "^0.12.0"
+  }
+}
