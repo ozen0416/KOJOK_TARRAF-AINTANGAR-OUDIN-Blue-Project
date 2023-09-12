@@ -34,10 +34,3 @@ class Item {
         this.bonus = bonus
     }
 }
-
-let test = {
-    pseudo : Player.nickname,
-    gold : 500,
-    height : Player.height,
-    inventory : Item.name
-}
