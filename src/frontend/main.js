@@ -39,5 +39,5 @@ let test = {
     pseudo : Player.nickname,
     gold : 500,
     height : Player.height,
-    inventory : Item.inventory
+    inventory : Item.name
 }
