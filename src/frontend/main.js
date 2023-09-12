@@ -1,4 +1,6 @@
 const url= "http://localhost:3000"
+const btn =document.getElementById("jouer")
+const ctn = document.querySelector('.main-container')
 
 let meal = []
 
@@ -6,16 +8,18 @@ function loadData() {
     fetch(`${url}/bouffe`)
         .then(resp => {
             return resp.json()
+           
         })
         .then(data => {
             meal = data
-            // displayContent()
         })
 }
 
-// function displayContent() {
-
-// }
+function displayContent() {
+    btn.addEventListener("click", function() {
+        ctn.style.display = 'none';
+    })
+}
 
 class Player {
     constructor(nickname, gold, height, inventory) {
@@ -34,3 +38,5 @@ class Item {
         this.bonus = bonus
     }
 }
+
+loadData()

@@ -16,7 +16,6 @@ exports.getDatabyId = (req, res) => {
         res.status(404).send('?')
     }
     res.status(200).json({
-        message : "trouvé",
         plats
     })
 }

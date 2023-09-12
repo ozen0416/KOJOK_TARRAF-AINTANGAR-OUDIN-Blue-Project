@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,68 +7,73 @@
     <title>Blue Project</title>
 </head>
 <header class="navbar">
-    
+
 </header>
+
 <body>
     <script src="main.js"></script>
-    
-    <h1>Bienvenue au Dileme Gastronomique</h1>
-    <form action=" " method="post">
-        <div id="cadreNom">
-            <label for="nom">Username :</label>
-            <input type="text" id="nom" name="nom" required>
-        </div>
-        <div id="objets">
-            <label id="objet">Objet de départ :</label>
-            <input type="radio" id="alignementPositif" name="alignement" value="object1">
-            <label for="alignementPositif">Objet1</label>
 
-            <input type="radio" id="alignementPositif" name="alignement" value="object2">
-            <label for="alignementPositif">Object2</label>
+    <h1>Bienvenue au Dilemme Gastronomique</h1>
+    <div class="main-container">
+        <form action=" " method="post">
+            <div id="cadreNom">
+                <label for="nom">Username :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div id="objets">
+                <label id="objet">Objet de départ :</label>
+                <input type="radio" id="alignementPositif" name="alignement" value="object1">
+                <label for="alignementPositif">Objet1</label>
 
-            <input type="radio" id="alignementPositif" name="alignement" value="object3">
-            <label for="alignementPositif">Object3</label>
+                <input type="radio" id="alignementPositif" name="alignement" value="object2">
+                <label for="alignementPositif">Object2</label>
 
-        </div>
-        <div id="aligne">
-            <p>Question 1 : Quelle est votre préférence ?</p>
-            <input type="radio" id="alignementPositif" name="alignement" value="positif">
-            <label for="alignementPositif">Excelent</label>
-           
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">Assez-bien</label>
+                <input type="radio" id="alignementPositif" name="alignement" value="object3">
+                <label for="alignementPositif">Object3</label>
 
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">mauvais</label>
+            </div>
+            <div id="aligne">
+                <p>Question 1 : Quelle est votre préférence ?</p>
+                <input type="radio" id="alignementPositif" name="alignement" value="positif">
+                <label for="alignementPositif">Excelent</label>
 
-        </div>
-        <div id="aligne">
-            <p>Question 2 : Quelle est votre préférence ?</p>
-            <input type="radio" id="alignementPositif" name="alignement" value="positif">
-            <label for="alignementPositif">bon</label>
-           
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">trés-bien</label>
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">Assez-bien</label>
 
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">trés-bien</label>
-        </div>
-        <div id="aligne">
-            <p>Question 3 : Quelle est votre préférence ?</p>
-            <input type="radio" id="alignementPositif" name="alignement" value="positif">
-            <label for="alignementPositif">Positif</label>
-           
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">Négatif</label>
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">mauvais</label>
 
-            
-            <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-            <label for="alignementNegatif">Passable</label>
-        </div>
-       
-        <button type="submit">Jouer</button>
-    </form>
-   
+            </div>
+            <div id="aligne">
+                <p>Question 2 : Quelle est votre préférence ?</p>
+                <input type="radio" id="alignementPositif" name="alignement" value="positif">
+                <label for="alignementPositif">bon</label>
+
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">trés-bien</label>
+
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">trés-bien</label>
+            </div>
+            <div id="aligne">
+                <p>Question 3 : Quelle est votre préférence ?</p>
+                <input type="radio" id="alignementPositif" name="alignement" value="positif">
+                <label for="alignementPositif">Positif</label>
+
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">Négatif</label>
+
+
+                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
+                <label for="alignementNegatif">Passable</label>
+            </div>
+
+            <button type="submit" id="jouer">Jouer</button>
+        </form>
+    </div>
+
+
 
 </body>
+
 </html>
