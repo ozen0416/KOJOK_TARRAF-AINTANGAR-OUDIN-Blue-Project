@@ -17,8 +17,27 @@ function loadData() {
 
 // }
 
-function Player(nickname, starter, height) {
-    this.nickname = nickname;
-    this.starter = starter;
-    this.height = height;
+class Player {
+    constructor(nickname, gold, height, inventory) {
+        this.nickname = nickname
+        this.gold = gold
+        this.height = height
+        this.inventory = inventory
+    }
+}
+
+class Item {
+    constructor(name, description, price, bonus) {
+        this.name = name
+        this.description = description
+        this.price = price
+        this.bonus = bonus
+    }
+}
+
+let test = {
+    pseudo : Player.nickname,
+    gold : 500,
+    height : Player.height,
+    inventory : Item.inventory
 }
