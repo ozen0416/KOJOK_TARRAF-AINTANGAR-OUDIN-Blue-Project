@@ -3,7 +3,7 @@ const url= "http://localhost:3000"
 let meal = []
 
 function loadData() {
-    fetch(`${url}/aliments`)
+    fetch(`${url}/bouffe`)
         .then(resp => {
             return resp.json()
         })

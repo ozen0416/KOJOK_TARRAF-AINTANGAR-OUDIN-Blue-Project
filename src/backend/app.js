@@ -1,5 +1,5 @@
-const express = require('express')()
-const app = express
+const express = require('express')
+const app = express()
 
 const port = 3000;
 
@@ -8,8 +8,8 @@ app.use(cors({
     origin :'*'
 }))
 
-app.get('/', (req,res) => {
-    res.send("oui")
-} );
+const route = require('./routes/nourriture')
+
+app.use(route)
 
 app.listen(port, () => console.log(`Server is listening on port ${port}`))
