@@ -6,7 +6,7 @@
         "description": "Le brocoli est une source riche en fibres et en vitamines, offrant de nombreux bienfaits pour la santé.",
         "poids": "100g",
         "prix": "$13",
-        "url" : "/"
+        "url" : "assets/broccoli.png"
       },
       {
         "id": 2,
@@ -14,7 +14,7 @@
         "description": "Les Giga tacos 4 viandes gratinés sont un festin de saveurs irrésistibles qui combinent du bœuf tendre, du poulet savoureux, du porc juteux et de l'agneau fondant, le tout recouvert de fromage fondu et d'une sauce onctueuse.",
         "poids": "300g",
         "prix": "$5",
-        "url" : "/"
+        "url" : "assets/tacos.png"
       },
       {
         "id": 3,
@@ -22,7 +22,7 @@
         "description": "Une salade de saumon est une option nutritive riche en oméga-3 et en protéines essentielles pour la santé.",
         "poids": "200g",
         "prix": "$8",
-        "url" : "/"
+        "url" : "assets/salade_saumon.png"
       },
       {
         "id": 4,
@@ -30,7 +30,7 @@
         "description": "Les tenders de poulet sont des morceaux de poulet croustillants à l'extérieur et tendres à l'intérieur, offrant une expérience de mordant délicieuse.",
         "poids": "200g",
         "prix": "$4",
-        "url" : "/"
+        "url" : "assets/tenders.png"
       },
       {
         "id": 5,
@@ -38,7 +38,7 @@
         "description": "Le yaourt nature est une source de probiotiques bénéfiques pour la digestion et riche en nutriments essentiels.",
         "poids": "150g",
         "prix": "$7",
-        "url" : "/"
+        "url" : "assets/yaourt_nature.png"
       },
       {
         "id": 6,
@@ -46,7 +46,7 @@
         "description": "La glace au chocolat est une tentation crémeuse et chocolatée qui fond dans la bouche, offrant une expérience sucrée et indulgente.",
         "poids": "150ml",
         "prix": "$2",
-        "url" : "/"
+        "url" : "assets/glace_chocolat.png"
       },
       {
         "id": 7,
@@ -54,7 +54,7 @@
         "description": "Le pokebowl est une option saine et équilibrée, offrant une combinaison de saveurs et de nutriments.",
         "poids": "300g",
         "prix": "$18",
-        "url" : "/"
+        "url" : "assets/pokebowl.png"
       },
       {
         "id": 8,
@@ -62,7 +62,7 @@
         "description": "Le Double Cheese Burger, avec ses deux galettes de bœuf juteuses, son fromage fondant et ses sauces délicieuses, offre une explosion de saveurs réconfortantes.",
         "poids": "250g",
         "prix": "$4",
-        "url" : "/"
+        "url" : "assets/double_cheese.png"
       },
       {
         "id": 9,
@@ -70,7 +70,7 @@
         "description": "Les fruits sont une explosion de saveurs naturelles, offrant une variété de nutriments essentiels pour une alimentation équilibrée.",
         "poids": "200g",
         "prix": "$12",
-        "url" : "/"
+        "url" : "assets/fruits.png"
       },
       {
         "id": 10,
@@ -78,7 +78,7 @@
         "description": "Les Haribo au Coca sont des bonbons gélifiés au goût pétillant et sucré qui offrent une expérience de confiserie exaltante et pleine de pep's.",
         "poids": "100g",
         "prix": "$3",
-        "url" : "/"
+        "url" : "assets/haribo_coca.png"
       },
       {
         "id": 11,
@@ -86,7 +86,7 @@
         "description": "Le riz blanc, doux et moelleux, est un accompagnement incontournable, offrant une satisfaction réconfortante que le quinoa, bien que nutritif, ne peut égaler.",
         "poids": "150g",
         "prix": "$9",
-        "url" : "/"
+        "url" : "assets/riz_blanc.png"
       },
       {
         "id": 12,
@@ -94,7 +94,7 @@
         "description": "La pizza, avec sa croûte croustillante, son fromage fondu et sa garniture savoureuse, offre une expérience culinaire réconfortante et indulgente.",
         "poids": "400g",
         "prix": "$8",
-        "url" : "/"
+        "url" : "assets/pizza.png"
       },
       {
         "id": 13,
@@ -102,7 +102,7 @@
         "description": "L'eau minérale offre une option hydratante et rafraîchissante essentielle pour une vie saine et active.",
         "poids": "500ml",
         "prix": "$5",
-        "url" : "/"
+        "url" : "assets/water.png"
       },
       {
         "id": 14,
@@ -110,7 +110,7 @@
         "description": "Le Coca-Cola, avec ses bulles pétillantes et son goût sucré caractéristique, apporte une satisfaction rafraîchissante instantanée.",
         "poids": "330ml",
         "prix": "$2",
-        "url" : "/"
+        "url" : "assets/coca.png"
       },
       {
         "id": 15,
@@ -118,7 +118,7 @@
         "description": "Une salade verte fraîchement préparée, avec ses feuilles croquantes et ses ingrédients variés, offre une expérience légère et revitalisante que les churros, bien que délicieux, ne peuvent égaler.",
         "poids": "150g",
         "prix": "$9",
-        "url" : "/"
+        "url" : "assets/salade_verte.png"
       },
       {
         "id": 16,
@@ -126,7 +126,7 @@
         "description": "Les churros sont des pâtisseries frites à l'extérieur, moelleuses à l'intérieur, saupoudrées de sucre et souvent accompagnées de chocolat chaud pour une expérience sucrée irrésistible.",
         "poids": "80g",
         "prix": "$3",
-        "url" : "/"
+        "url" : "assets/churros.png"
       }
     ]
   }
