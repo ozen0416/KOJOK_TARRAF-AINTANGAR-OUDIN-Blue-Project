@@ -16,3 +16,9 @@ function loadData() {
 // function displayContent() {
 
 // }
+
+function Player(nickname, starter, height) {
+    this.nickname = nickname;
+    this.starter = starter;
+    this.height = height;
+}
