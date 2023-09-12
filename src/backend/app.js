@@ -9,7 +9,7 @@ app.use(cors({
 }))
 
 app.get('/', (req,res) => {
-    res.send("hello")
+    res.send("oui")
 } );
 
 app.listen(port, () => console.log(`Server is listening on port ${port}`))
