@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 2.8em;
     background-color: black;
+    margin-top: -13px;
 }
 /* .liste li a{
     color: white;
@@ -23,24 +24,28 @@
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 2em;
-    color: violet;
+    font-size: 3em;
+    color: white;
     text-align: center;
 }
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 1.2em;
-    background: url('backend/assets/dej.png');
-    text-align: center;
+    background: url("https://www.bioalaune.com/img/article/10203-junk_food.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-attachment: fixed;
+    /* text-align: center; */
 
 }
 form{
     text-align: center;
-    background-color:wheat;
+    background-color: white;
     border: white 2px solid;
-    padding: 19px;
-    width: 40%;
+    padding: 70px;
+    width: 30%;
     height: 78%;
     margin: 0 auto;
     /* display: inline-block; */
@@ -80,7 +85,7 @@ button {
 form button {
     display: block;
     background-color:black;
-    color: wheat;
+    color: white;
     transition: all 0.5s ease 0s;
     text-align: center;
     margin-top: 50px;
