@@ -24,7 +24,7 @@ function displayContent() {
         ctn.style.display = 'none';
         ctn.innerHTML = ""
         let playerCtn = document.createElement("div")
-        playerCtn.innerHTML = `<div class="golds"> <p>${argent}$</p> <p>${poids} <p>${nom.value}</p> </p></div>`
+        playerCtn.innerHTML = `<div class="golds"> <p>${argent}$</p> <p>${poids}kg <p>${nom.value}</p> </p></div>`
         console.log(nom)
         ctn.style.display = 'flex'
         ctn.appendChild(playerCtn)
