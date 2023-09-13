@@ -17,6 +17,7 @@ function loadData() {
             meal = data
         })
 }
+
 function displayContent() {
 
     btn.addEventListener("click", function () {
