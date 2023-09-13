@@ -1,5 +1,5 @@
-const url= "http://localhost:3000"
-const btn =document.getElementById("jouer")
+const url = "http://localhost:3000"
+const btn = document.getElementById("jouer")
 const ctn = document.querySelector('.main-container')
 
 let meal = []
@@ -8,7 +8,7 @@ function loadData() {
     fetch(`${url}/bouffe`)
         .then(resp => {
             return resp.json()
-           
+
         })
         .then(data => {
             meal = data
@@ -16,7 +16,7 @@ function loadData() {
 }
 
 function displayContent() {
-    btn.addEventListener("click", function() {
+    btn.addEventListener("click", function () {
         ctn.style.display = 'none';
     })
 }
@@ -39,4 +39,45 @@ class Item {
     }
 }
 
-loadData()
+function verifierCaracteres(input) {
+    var regex = /^[a-zA-Z]*$/; // Autorise uniquement les lettres
+    if (!regex.test(input.value)) {
+        alert("Certains caractères ne sont pas autorisés. Veuillez utiliser uniquement des lettres.");
+        input.value = input.value.replace(/[^a-zA-Z]/g, ''); // Supprime les caractères non autorisés
+    }
+}
+
+function calculerCaracteristiques() {
+    var nom = document.getElementById("nom").value;
+    var objet = document.querySelector('input[name="objet"]:checked').value;
+    var questions = document.querySelectorAll('.question input:checked');
+    var argent = 100;
+    var poids = 75;
+
+    verifierCaracteres(document.getElementById("nom"));
+
+    questions.forEach(function (question) {
+        if (question.value === 'positif') {
+            poids -= 2;
+        } else if (question.value === 'negatif') {
+            poids += 3;
+        }
+    });
+
+    if (objet === 'Altères') {
+        argent -= 15;
+        poids -= 2;
+    } else if (objet === 'Carte Bancaire') {
+        argent += 50;
+        poids += 0;
+    } else if (objet === 'Coach') {
+        argent -= 30;
+        poids -= 5;
+    }
+
+    // Faites quelque chose avec les valeurs
+    console.log("Nom :", nom);
+    console.log("Objet choisi :", objet);
+    console.log("Argent :", argent);
+    console.log("Poids :", poids);
+}
