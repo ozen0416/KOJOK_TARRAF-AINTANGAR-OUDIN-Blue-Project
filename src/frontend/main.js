@@ -44,6 +44,8 @@ function verifierCaracteres(input) {
     if (!regex.test(input.value)) {
         alert("Certains caractères ne sont pas autorisés. Veuillez utiliser uniquement des lettres.");
         input.value = input.value.replace(/[^a-zA-Z]/g, ''); // Supprime les caractères non autorisés
+    } else {
+        input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1); // Met en majuscule la première lettre
     }
 }
 
