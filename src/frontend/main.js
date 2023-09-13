@@ -40,7 +40,7 @@ class Item {
 }
 
 function verifierCaracteres(input) {
-    var regex = /^[a-zA-Z]*$/; // Autorise uniquement les lettres
+    let regex = /^[a-zA-Z]*$/; // Autorise uniquement les lettres
     if (!regex.test(input.value)) {
         alert("Certains caractères ne sont pas autorisés. Veuillez utiliser uniquement des lettres.");
         input.value = input.value.replace(/[^a-zA-Z]/g, ''); // Supprime les caractères non autorisés
@@ -48,11 +48,11 @@ function verifierCaracteres(input) {
 }
 
 function calculerCaracteristiques() {
-    var nom = document.getElementById("nom").value;
-    var objet = document.querySelector('input[name="objet"]:checked').value;
-    var questions = document.querySelectorAll('.question input:checked');
-    var argent = 100;
-    var poids = 75;
+    let nom = document.getElementById("nom").value;
+    let objet = document.querySelector('input[name="objet"]:checked').value;
+    let questions = document.querySelectorAll('.question input:checked');
+    let argent = 100;
+    let poids = 75;
 
     verifierCaracteres(document.getElementById("nom"));
 
@@ -66,13 +66,13 @@ function calculerCaracteristiques() {
 
     if (objet === 'Altères') {
         argent -= 15;
-        poids -= 2;
+        poids -= 7;
     } else if (objet === 'Carte Bancaire') {
         argent += 50;
-        poids += 0;
+        poids += 13;
     } else if (objet === 'Coach') {
         argent -= 30;
-        poids -= 5;
+        poids -= 10;
     }
 
     // Faites quelque chose avec les valeurs
