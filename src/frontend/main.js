@@ -23,10 +23,16 @@ function displayContent() {
     btn.addEventListener("click", function () {
         ctn.style.display = 'none';
         ctn.innerHTML = ""
-        let playerCtn = document.createElement("div")
+        let playerCtn = document.createElement("div")   
+        let questionCtn = document.createElement("div")
         playerCtn.innerHTML = `<div class="golds"> <p>${argent}$</p> <p>${poids}kg <p>${nom.value}</p> </p></div>`
+        meal.forEach(meals => {
+            questionCtn.innerHTML `<div> <p>${meals.id}</p>  </div>`
+            console.log("hey")
+        })
         ctn.style.display = 'flex'
         ctn.appendChild(playerCtn)
+        ctn.appendChild(questionCtn)
     })
 }
 
