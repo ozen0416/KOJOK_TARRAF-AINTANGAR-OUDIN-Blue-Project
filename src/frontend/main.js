@@ -1,7 +1,10 @@
 const url = "http://localhost:3000"
 const btn = document.getElementById("jouer")
-const ctn = document.querySelector('.main-container')
-
+const ctn = document.querySelector(".main-container")
+const ttl = document.querySelector("#titre")
+var argent = 100;
+var poids = 75;
+var nom = document.getElementById("nom");
 let meal = []
 
 function loadData() {
@@ -16,10 +19,18 @@ function loadData() {
 }
 
 function displayContent() {
+
     btn.addEventListener("click", function () {
         ctn.style.display = 'none';
+        ctn.innerHTML = ""
+        let playerCtn = document.createElement("div")
+        playerCtn.innerHTML = `<div class="golds"> <p>${argent}$</p> <p>${poids} <p>${nom.value}</p> </p></div>`
+        console.log(nom)
+        ctn.style.display = 'flex'
+        ctn.appendChild(playerCtn)
     })
 }
+
 
 class Player {
     constructor(nickname, gold, height, inventory) {
@@ -50,12 +61,8 @@ function verifierCaracteres(input) {
 }
 
 function calculerCaracteristiques() {
-    let nom = document.getElementById("nom").value;
     let objet = document.querySelector('input[name="objet"]:checked').value;
     let questions = document.querySelectorAll('.question input:checked');
-    let argent = 100;
-    let poids = 75;
-
     verifierCaracteres(document.getElementById("nom"));
 
     questions.forEach(function (question) {
@@ -77,9 +84,6 @@ function calculerCaracteristiques() {
         poids -= 10;
     }
 
-    // Faites quelque chose avec les valeurs
-    console.log("Nom :", nom);
-    console.log("Objet choisi :", objet);
-    console.log("Argent :", argent);
-    console.log("Poids :", poids);
 }
+
+displayContent()

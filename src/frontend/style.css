@@ -17,22 +17,6 @@ html {
     height: 80%;
 }
 
-
-/* .liste li a{
-    color: white;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-}
-
-.liste {
-    display: flex;
-    list-style: none;
-}
-.liste li {
-    margin-right: 1em;
-} */
 h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
@@ -74,21 +58,7 @@ form {
     margin-bottom: 10px;
 }
 
-/* form li a {
-    color: black;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 1.2em;
-}
 
-form ul li {
-    list-style-type: none;
-    
-    color: black;
-    transition: all 0.5s ease 0s;
-} */
-/* margin-left: -15px;  */
 button {
     color: white;
     border: none;
@@ -137,5 +107,10 @@ input[type="text"] {
 
 p {
     font-weight: bold;
+}
 
+.golds {
+    color: white;
+    margin: 10px;
+    position: absolute;
 }
