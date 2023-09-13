@@ -8,7 +8,7 @@ var nom = document.getElementById("nom");
 let meal = []
 
 function loadData() {
-    fetch(`${url}/bouffe`)
+    fetch(`${url}/`)
         .then(resp => {
             return resp.json()
 
@@ -17,7 +17,6 @@ function loadData() {
             meal = data
         })
 }
-
 function displayContent() {
 
     btn.addEventListener("click", function () {
