@@ -2,9 +2,9 @@ const url = "http://localhost:3000"
 const btn = document.getElementById("jouer")
 const ctn = document.querySelector(".main-container")
 const ttl = document.querySelector("#titre")
-var argent = 100;
-var poids = 75;
-var nom = document.getElementById("nom");
+let argent = 100;
+let poids = 75;
+let nom = document.getElementById("nom");
 let meal = []
 
 function loadData() {
@@ -22,11 +22,16 @@ function displayContent() {
     btn.addEventListener("click", function () {
         ctn.style.display = 'none';
         ctn.innerHTML = ""
-        let playerCtn = document.createElement("div")
+        let playerCtn = document.createElement("div")   
+        let questionCtn = document.createElement("div")
         playerCtn.innerHTML = `<div class="golds"> <p>${argent}$</p> <p>${poids}kg <p>${nom.value}</p> </p></div>`
-        console.log(nom)
+        meal.forEach(meals => {
+            questionCtn.innerHTML `<div> <p>${meals.id}</p>  </div>`
+            console.log("hey")
+        })
         ctn.style.display = 'flex'
         ctn.appendChild(playerCtn)
+        ctn.appendChild(questionCtn)
     })
 }
 
