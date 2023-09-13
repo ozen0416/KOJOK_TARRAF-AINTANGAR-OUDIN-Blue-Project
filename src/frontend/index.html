@@ -8,71 +8,60 @@
 </head>
 <header class="navbar">
 
-    <h1>Bienvenue au Dilemme Gastronomique</h1>
-
+    <h1>Bienvenue au Dileme Gastronomique</h1>
+    
 </header>
 
 <body>
     <div class="main-container">
-        <form action=" " method="post">
-            <div id="cadreNom">
-                <label for="nom">Username :</label>
-                <input type="text" id="nom" name="nom" required>
-            </div>
-            <div id="objets">
-                <div>
+        <div class="form-container">
+            <form action="" class="formulaire" method="get" onsubmit="return false;">
+                <div id="cadreNom">
+                    <label for="nom">Username :</label>
+                    <input type="text" id="nom" name="nom" required oninput="verifierCaracteres(this)">
+                </div>
+            
+                <div id="objets">
                     <label id="objet">Objet de départ :</label>
-                    <input type="radio" id="alignementPositif" name="alignement" value="object1">
-                    <label for="alignementPositif">Objet1</label>
+                    <input type="radio" id="object1" name="objet" value="Altères">
+                    <label for="object1">Altères</label>
+            
+                    <input type="radio" id="object2" name="objet" value="Carte Bancaire">
+                    <label for="object2">Carte Bancaire</label>
+            
+                    <input type="radio" id="object3" name="objet" value="Coach">
+                    <label for="object3">Coach</label>
                 </div>
-
-                <div>
-                    <input type="radio" id="alignementPositif" name="alignement" value="object2">
-                    <label for="alignementPositif">Object2</label>
+            
+                <div class="question">
+                    <p>Question 1 : Avez-vous un petit appétit ?</p>
+                    <input type="radio" name="question1" value="positif">
+                    <label for="alignementPositif">Oui</label>
+            
+                    <input type="radio" name="question1" value="negatif">
+                    <label for="alignementNegatif">Non</label>
                 </div>
-
-                <div>
-                    <input type="radio" id="alignementPositif" name="alignement" value="object3">
-                    <label for="alignementPositif">Object3</label>
+            
+                <div class="question">
+                    <p>Question 2 : Avez-vous une alimentation saine ?</p>
+                    <input type="radio" name="question2" value="positif">
+                    <label for="alignementPositif">Oui</label>
+            
+                    <input type="radio" name="question2" value="negatif">
+                    <label for="alignementNegatif">Non</label>
                 </div>
-
-
-            </div>
-            <div id="aligne">
-                <p>Question 1 : Êtes-vous gourmand (e) ?</p>
-                <input type="radio" id="alignementPositif" name="alignement" value="positif">
-                <label for="alignementPositif">oui</label>
-        
-                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-                <label for="alignementNegatif">non</label>
-        
-            </div>
-            <div id="aligne">
-                <p>Question 2 : Avez-vous une alimentation saine ?</p>
-                <input type="radio" id="alignementPositif" name="alignement" value="positif">
-                <label for="alignementPositif">oui</label>
-        
-                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-                <label for="alignementNegatif">non</label>
-            </div>
-            <div id="aligne">
-                <p>Question 3 : Vous arrive-t-il de faire des détox ?</p>
-                <input type="radio" id="alignementPositif" name="alignement" value="positif">
-                <label for="alignementPositif">oui</label>
-        
-                <input type="radio" id="alignementNegatif" name="alignement" value="negatif">
-                <label for="alignementNegatif">oui</label>
-            </div>
-
-            <button type="submit" id="jouer">Jouer</button>
-        </form>
+            
+                <div class="question">
+                    <p>Question 3 : Vous arrive-t-il de faire des détox ?</p>
+                    <input type="radio" name="question3" value="positif">
+                    <label for="alignementPositif">Oui</label>
+            
+                    <input type="radio" name="question3" value="negatif">
+                    <label for="alignementNegatif">Non</label>
+                </div>
+                <button type="button" id="jouer" onclick="calculerCaracteristiques()">Jouer</button>
+            </form>
+        </div>
     </div>
-
-
-    </div>
-    </form>
     <script src="main.js"></script>
-
 </body>
-
-</html>
