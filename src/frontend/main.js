@@ -41,10 +41,12 @@ function displayContent() {
                     <label class="label1">
                         <imgclass="img1" src="${bouffe[n].url}" alt="image">
                         <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
+                        <p> ${bouffe[n].description} </p>
                     </label>
-                    <label class="label>
+                    <label class="label2">
                         <img class="img2" src="${bouffe[n + 1].url}" alt="image">
                         <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
+                       <p> ${bouffe[n + 1].description} </p>
                     </label>
                 </div>
                 <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
@@ -56,9 +58,9 @@ function displayContent() {
         randomInt();
 
         valider.addEventListener("click", function () {
-            randomInt();
             console.log(numerosDejaUtilises);
             traiterChoix();
+            randomInt();    
         });
     });
 }
