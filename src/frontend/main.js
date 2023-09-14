@@ -40,7 +40,7 @@ function displayContent() {
                     <input type="radio" name="choix" value="choix1"> ${bouffe[1].nom}
                 </label>
                 <label>
-                    <input type="radio" name="choix" value="choix2"> Option 2
+                    <input type="radio" name="choix" value="choix2"> ${bouffe[2].nom}
                 </label>
                 <button type="button" onclick="traiterChoix()">Valider</button>
             </div>`
