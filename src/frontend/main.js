@@ -2,6 +2,7 @@ const url = "http://localhost:3000"
 const btn = document.getElementById("jouer")
 const ctn = document.querySelector(".main-container")
 const ttl = document.querySelector("#titre")
+
 let argent = 100;
 let poids = 75;
 let nom = document.getElementById("nom");
@@ -31,30 +32,35 @@ function displayContent() {
         let form = document.querySelector(".formulaire");
         form.innerHTML = ""
         bouffe.forEach(_ => {
+            let n = numerosDejaUtilises[numerosDejaUtilises.length - 1];
             form.innerHTML = `
             <div>
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
-                <div class="label">
-                    <label class="label1">
-                        <img class="img1" src="${bouffe[0].url}" alt="image">
-                        <input type="radio" name="choix" value="choix1"> ${bouffe[0].nom}
-                    </label>
-
-                    <label class= "label2">
-                    <img class="img2" src="${bouffe[1].url}" alt="image">
-                        <input type="radio" name="choix" value="choix2"> ${bouffe[1].nom}
-                    </label>
-                </div>
-                    
+                <label>
+                    <img src="${bouffe[0].url}" alt="image">
+                    <input type="radio" name="choix" value="choix1"> ${bouffe[0].nom}
+                </label>
+                <label>
+                    <img src="${bouffe[1].url}" alt="image">
+                    <input type="radio" name="choix" value="choix2"> ${bouffe[1].nom}
+                </label>
                 <button type="button" onclick="traiterChoix()">Valider</button>
             </div>`
                 ;
+        });
+        const valider = document.querySelector(".valider")
 
+        randomInt();
+
+        valider.addEventListener("click", function () {
+            console.log(numerosDejaUtilises);
+            traiterChoix();
+            randomInt();
         });
     });
-
 }
+
 loadData()
 
 
@@ -69,17 +75,6 @@ class Player {
 }
 
 let player;
-
-
-class Meal {
-    constructor(name, description, price, bonus) {
-        this.name = name
-        this.description = description
-        this.price = price
-        this.bonus = bonus
-    }
-}
-
 
 class Item {
     constructor(name, description, price, bonus) {
@@ -128,5 +123,35 @@ function calculerCaracteristiques() {
     console.log(player);
 
 }
+
+function traiterChoix() {
+    if(document.querySelector('input[name="choix"]:checked').value === 'choix1'){
+        player.money -= bouffe[0].prix;
+        player.poid -= bouffe[0].poids;
+    } else if(document.querySelector('input[name="choix"]:checked').value === 'choix2'){
+        player.money -= bouffe[1].prix;
+        player.poid += bouffe[1].poids;
+    }
+}
+
+let numerosDejaUtilises = [];
+
+function randomInt() {
+    if (numerosDejaUtilises.length === 15) {
+        console.error("Tous les numéros ont été utilisés !");
+        return null; // Vous pouvez choisir de retourner quelque chose de spécial pour indiquer cette condition.
+    }
+
+    let randomNumber;
+    do {
+        randomNumber = Math.floor(Math.random() * 8) * 2;
+    } while (numerosDejaUtilises.includes(randomNumber));
+
+    numerosDejaUtilises.push(randomNumber);
+    return randomNumber;
+}
+
+let nombreAleatoire = randomInt();
+console.log(nombreAleatoire);
 
 displayContent()
