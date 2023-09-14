@@ -36,10 +36,12 @@ function displayContent() {
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <label>
-                    <input type="radio" name="choix" value="choix1"> ${bouffe[1].nom}
+                    <img src="${bouffe[0].url}" alt="image">
+                    <input type="radio" name="choix" value="choix1"> ${bouffe[0].nom}
                 </label>
                 <label>
-                    <input type="radio" name="choix" value="choix2"> ${bouffe[2].nom}
+                    <img src="${bouffe[1].url}" alt="image">
+                    <input type="radio" name="choix" value="choix2"> ${bouffe[1].nom}
                 </label>
                 <button type="button" onclick="traiterChoix()">Valider</button>
             </div>`
