@@ -117,3 +117,30 @@ p {
 #choix {
     padding: 30px;
 }
+.label{
+    display: flex;
+    justify-content: space-between;
+    padding: 10%;
+}
+input[type="radio"]{
+    margin: auto;
+}
+.label img{
+    margin-right: auto;
+}
+button[type="button"]{
+    display: block;
+    margin: 0 auto;
+}
+.img1{
+    width: 110%;
+}
+.img2{
+    width: 90%;
+}
+.label1{
+    padding: 4%;
+}
+.label2{
+    padding: 2%;
+}
