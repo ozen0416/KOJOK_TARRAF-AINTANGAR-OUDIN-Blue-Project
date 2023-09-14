@@ -37,17 +37,15 @@ function displayContent() {
             <div>
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
-                <div class="label">
-                    <label class="label1">
-                        <img class="img1" src="${bouffe[0].url}" alt="image">
-                        <input type="radio" name="choix" value="choix1"> ${bouffe[0].nom}
-                    </label>
-                    <label class="label2">
-                        <img class="img2" src="${bouffe[1].url}" alt="image">
-                        <input type="radio" name="choix" value="choix2"> ${bouffe[1].nom}
-                    </label>
-                </div>
-                <button type="button" onclick="traiterChoix()">Valider</button>
+                <label>
+                    <img src="${bouffe[n].url}" alt="image">
+                    <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
+                </label>
+                <label>
+                    <img src="${bouffe[n + 1].url}" alt="image">
+                    <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
+                </label>
+                <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
             </div>`
                 ;
         });
