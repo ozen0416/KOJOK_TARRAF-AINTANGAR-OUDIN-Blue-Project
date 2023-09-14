@@ -8,8 +8,8 @@
 </head>
 <header class="navbar">
 
-    <div>
-       <h1 id="titre">Bienvenue au Dilemme Gastronomique</h1> 
+    <div class="title-container">
+       <h1 class="titre">Bienvenue au Dilemme Gastronomique</h1> 
     </div>
     
     
@@ -27,40 +27,40 @@
                 <div id="objets">
                     <label id="objet">Objet de départ :</label>
                     <input type="radio" id="object1" name="objet" value="Altères">
-                    <label for="object1">Altères</label>
+                    <label>Altères</label>
             
                     <input type="radio" id="object2" name="objet" value="Carte Bancaire">
-                    <label for="object2">Carte Bancaire</label>
+                    <label>Carte Bancaire</label>
             
                     <input type="radio" id="object3" name="objet" value="Coach">
-                    <label for="object3">Coach</label>
+                    <label>Coach</label>
                 </div>
             
                 <div class="question">
                     <p>Question 1 : Avez-vous un petit appétit ?</p>
                     <input type="radio" name="question1" value="positif">
-                    <label for="alignementPositif">Oui</label>
+                    <label>Oui</label>
             
                     <input type="radio" name="question1" value="negatif">
-                    <label for="alignementNegatif">Non</label>
+                    <label>Non</label>
                 </div>
             
                 <div class="question">
                     <p>Question 2 : Avez-vous une alimentation saine ?</p>
                     <input type="radio" name="question2" value="positif">
-                    <label for="alignementPositif">Oui</label>
+                    <label>Oui</label>
             
                     <input type="radio" name="question2" value="negatif">
-                    <label for="alignementNegatif">Non</label>
+                    <label>Non</label>
                 </div>
             
                 <div class="question">
                     <p>Question 3 : Vous arrive-t-il de faire des détox ?</p>
                     <input type="radio" name="question3" value="positif">
-                    <label for="alignementPositif">Oui</label>
+                    <label>Oui</label>
             
                     <input type="radio" name="question3" value="negatif">
-                    <label for="alignementNegatif">Non</label>
+                    <label>Non</label>
                 </div>
                 <button type="button" id="jouer" onclick="calculerCaracteristiques()">Jouer</button>
             </form>

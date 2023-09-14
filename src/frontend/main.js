@@ -21,18 +21,31 @@ function loadData() {
 function displayContent() {
 
     btn.addEventListener("click", function () {
-        ctn.style.display = 'none';
-        ctn.innerHTML = ""
-        let playerCtn = document.createElement("div")   
-        let questionCtn = document.createElement("div")
-        playerCtn.innerHTML = `<div class="golds"> <p>${player.name}</p> <p>${player.poid}kg <p>${player.money}$</p> </p></div>`
-        meal.forEach(meals => {
-            questionCtn.innerHTML `<div> <p>${meals.id}</p>  </div>`
-            console.log("hey")
-        })
         ctn.style.display = 'flex'
-        ctn.appendChild(playerCtn)
-        ctn.appendChild(questionCtn)
+
+        let info = document.querySelector(".navbar");
+
+        info.innerHTML = `
+        <div>
+            <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
+        </div>
+        `;
+
+        let form = document.querySelector(".formulaire");
+
+        form.innerHTML = `
+        <div>
+                <p>Voici la description de la situation.</p>
+                <p>Choisissez entre les deux possibilités :</p>
+                <label>
+                    <input type="radio" name="choix" value="choix1"> Option 1
+                </label>
+                <label>
+                    <input type="radio" name="choix" value="choix2"> Option 2
+                </label>
+                <button type="button" onclick="traiterChoix()">Valider</button>
+            </div>
+        `;
     })
 }
 
@@ -72,7 +85,7 @@ function calculerCaracteristiques() {
     let objet = document.querySelector('input[name="objet"]:checked').value;
     let questions = document.querySelectorAll('.question input:checked');
     verifierCaracteres(document.getElementById("nom"));
-    player = new Player(nom.value , argent, poids, [])
+    player = new Player(nom.value, argent, poids, [])
 
     questions.forEach(function (question) {
         if (question.value === 'positif') {
