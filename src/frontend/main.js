@@ -30,7 +30,6 @@ function displayContent() {
 
         let form = document.querySelector(".formulaire");
         form.innerHTML = ""
-        let index = 0;
         bouffe.forEach(_ => {
             form.innerHTML = `
             <div>
