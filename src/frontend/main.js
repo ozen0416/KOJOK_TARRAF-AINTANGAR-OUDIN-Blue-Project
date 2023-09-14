@@ -42,7 +42,7 @@ function displayContent() {
                         <imgclass="img1" src="${bouffe[n].url}" alt="image">
                         <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
                     </label>
-                    <label class="label>
+                    <label class="label2">
                         <img class="img2" src="${bouffe[n + 1].url}" alt="image">
                         <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
                     </label>
