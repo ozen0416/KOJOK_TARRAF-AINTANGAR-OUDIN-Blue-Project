@@ -56,8 +56,9 @@ function displayContent() {
         randomInt();
 
         valider.addEventListener("click", function () {
-            console.log(numerosDejaUtilises);
             randomInt();
+            console.log(numerosDejaUtilises);
+            traiterChoix();
         });
     });
 }
