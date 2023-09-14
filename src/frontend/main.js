@@ -62,7 +62,8 @@ function displayContent() {
         valider.addEventListener("click", function () {
             console.log(numerosDejaUtilises);
             traiterChoix();
-            randomInt();    
+            randomInt();
+            console.log(player);
         });
     });
 }
@@ -105,7 +106,7 @@ function calculerCaracteristiques() {
     let objet = document.querySelector('input[name="objet"]:checked').value;
     let questions = document.querySelectorAll('.question input:checked');
     verifierCaracteres(document.getElementById("nom"));
-    player = new Player(nom.value, argent, poids, [])
+    player = new Player(nom.value, argent, poids, []);
 
     questions.forEach(function (question) {
         if (question.value === 'positif') {
@@ -126,18 +127,35 @@ function calculerCaracteristiques() {
         player.poid -= 10;
     }
 
-    console.log(player);
+    // Convertir le poids et l'argent en nombre
+    player.poid = Number(player.poid);
+    player.money = Number(player.money);
 
+    console.log(player);
 }
 
+
 function traiterChoix() {
-    if(document.querySelector('input[name="choix"]:checked').value === 'choix1'){
-        player.money -= bouffe[0].prix;
-        player.poid -= bouffe[0].poids;
-    } else if(document.querySelector('input[name="choix"]:checked').value === 'choix2'){
-        player.money -= bouffe[1].prix;
-        player.poid += bouffe[1].poids;
+    let n = numerosDejaUtilises[numerosDejaUtilises.length - 1];
+    bouffe[n].prix = Number(bouffe[n].prix);
+    bouffe[n].poids = Number(bouffe[n].poids);
+    bouffe[n + 1].prix = Number(bouffe[n + 1].prix);
+    bouffe[n + 1].poids = Number(bouffe[n + 1].poids);
+    if (document.querySelector('input[name="choix"]:checked').value === 'choix1') {
+        player.money -= bouffe[n].prix;
+        player.poid -= bouffe[n].poids;
+    } else if (document.querySelector('input[name="choix"]:checked').value === 'choix2') {
+        player.money -= bouffe[n + 1].prix;
+        player.poid += bouffe[n + 1].poids;
     }
+
+    // Mettre à jour l'affichage du joueur
+    let info = document.querySelector(".navbar");
+    info.innerHTML = `
+    <div>
+        <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
+    </div>
+    `;
 }
 
 let numerosDejaUtilises = [];
