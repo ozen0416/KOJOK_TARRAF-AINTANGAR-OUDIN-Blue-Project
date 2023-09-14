@@ -30,13 +30,14 @@ function displayContent() {
 
         let form = document.querySelector(".formulaire");
         form.innerHTML = ""
-        bouffe.forEach(aliments => {
+        let index = 0;
+        bouffe.forEach(_ => {
             form.innerHTML = `
             <div>
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <label>
-                    <input type="radio" name="choix" value="choix1"> ${aliments.nom}
+                    <input type="radio" name="choix" value="choix1"> ${bouffe[1].nom}
                 </label>
                 <label>
                     <input type="radio" name="choix" value="choix2"> Option 2
