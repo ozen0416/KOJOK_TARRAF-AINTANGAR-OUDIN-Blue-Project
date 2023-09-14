@@ -31,7 +31,6 @@ function displayContent() {
         let form = document.querySelector(".formulaire");
         form.innerHTML = ""
         bouffe.forEach(aliments => {
-            console.log(aliments)
             form.innerHTML = `
             <div>
                 <p>Voici la description de la situation.</p>
