@@ -108,6 +108,10 @@ function calculerCaracteristiques() {
     verifierCaracteres(document.getElementById("nom"));
     player = new Player(nom.value, argent, poids, []);
 
+    // Convertir le poids et l'argent en nombre
+    player.poid = Number(player.poid);
+    player.money = Number(player.money);
+
     questions.forEach(function (question) {
         if (question.value === 'positif') {
             player.poid -= 2;
@@ -126,10 +130,6 @@ function calculerCaracteristiques() {
         player.money -= 30;
         player.poid -= 10;
     }
-
-    // Convertir le poids et l'argent en nombre
-    player.poid = Number(player.poid);
-    player.money = Number(player.money);
 
     console.log(player);
 }
