@@ -12,7 +12,6 @@ function loadData() {
         .then(resp => resp.json())
         .then(data => {
             bouffe = data;
-            console.log(bouffe); // Placer ici pour s'assurer que les données sont chargées
         })
         .catch(err => console.log(err))
 }
@@ -53,7 +52,13 @@ function displayContent() {
 }
 loadData()
 
-
+function MarketMan() {
+    for (let i = 1; i <= 8; i++) {
+        if (i == 4) {
+            
+        }
+    }
+}
 
 class Player {
     constructor(nickname, gold, height, inventory) {
