@@ -125,7 +125,7 @@ p {
 #choix {
     padding: 30px;
 }
-/*.label{
+.label{
     display: flex;
     justify-content: space-between;
     padding: 10%;
@@ -141,10 +141,10 @@ button[type="button"]{
     margin: 0 auto;
 }
 .img1{
-    width: 110%;
+    width: 100%;
 }
 .img2{
-    width: 90%;
+    width: 100%;
 }
 .label1{
     padding: 4%;
@@ -152,4 +152,3 @@ button[type="button"]{
 .label2{
     padding: 2%;
 }
-*/
