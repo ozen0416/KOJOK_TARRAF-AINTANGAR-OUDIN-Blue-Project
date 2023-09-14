@@ -5,26 +5,23 @@ const ttl = document.querySelector("#titre")
 let argent = 100;
 let poids = 75;
 let nom = document.getElementById("nom");
-let meal = []
+let bouffe = [];
 
 function loadData() {
-    fetch(`${url}/`)
-        .then(resp => {
-            return resp.json()
-
-        })
+    return fetch(`${url}/`)
+        .then(resp => resp.json())
         .then(data => {
-            meal = data
+            bouffe = data;
+            console.log(bouffe); // Placer ici pour s'assurer que les données sont chargées
         })
+        .catch(err => console.log(err))
 }
 
 function displayContent() {
-
     btn.addEventListener("click", function () {
         ctn.style.display = 'flex'
-
+        
         let info = document.querySelector(".navbar");
-
         info.innerHTML = `
         <div>
             <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
@@ -33,8 +30,9 @@ function displayContent() {
 
         let form = document.querySelector(".formulaire");
 
-        form.innerHTML = `
-        <div>
+        bouffe.aliments.forEach(aliments => {
+            form.innerHTML = `
+            <div>
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <label>
@@ -46,8 +44,12 @@ function displayContent() {
                 <button type="button" onclick="traiterChoix()">Valider</button>
             </div>
         `;
-    })
+        });
+    });
+
+    loadData(); // Appeler loadData() ici pour charger les données avant de cliquer sur le bouton
 }
+
 
 
 class Player {
