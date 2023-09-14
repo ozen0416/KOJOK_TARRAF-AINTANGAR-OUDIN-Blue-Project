@@ -62,6 +62,16 @@ class Player {
 let player;
 
 
+class Meal {
+    constructor(name, description, price, bonus) {
+        this.name = name
+        this.description = description
+        this.price = price
+        this.bonus = bonus
+    }
+}
+
+
 class Item {
     constructor(name, description, price, bonus) {
         this.name = name
