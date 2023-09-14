@@ -19,23 +19,22 @@ function loadData() {
 }
 
 function displayContent() {
-
+    console.log(meal)
     btn.addEventListener("click", function () {
         ctn.style.display = 'flex'
 
         let info = document.querySelector(".navbar");
 
         info.innerHTML = `
-        <div>
+        <div class="">
             <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
         </div>
         `;
 
         let form = document.querySelector(".formulaire");
-
         form.innerHTML = `
         <div>
-                <p>Voici la description de la situation.</p>
+                <p>Voici la description de la situation : </p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <label>
                     <input type="radio" name="choix" value="choix1"> Option 1
