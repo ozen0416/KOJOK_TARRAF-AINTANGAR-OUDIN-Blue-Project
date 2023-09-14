@@ -18,10 +18,9 @@ function loadData() {
 }
 
 function displayContent() {
-    console.log(meal)
     btn.addEventListener("click", function () {
         ctn.style.display = 'flex'
-        
+
         let info = document.querySelector(".navbar");
         info.innerHTML = `
         <div class="">
@@ -30,29 +29,28 @@ function displayContent() {
         `;
 
         let form = document.querySelector(".formulaire");
-        form.innerHTML = `
-        <div>
-                <p>Voici la description de la situation : </p>
-
-        bouffe.aliments.forEach(aliments => {
+        form.innerHTML = ""
+        bouffe.forEach(aliments => {
+            console.log(aliments)
             form.innerHTML = `
             <div>
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <label>
-                    <input type="radio" name="choix" value="choix1"> Option 1
+                    <input type="radio" name="choix" value="choix1"> ${aliments.nom}
                 </label>
                 <label>
                     <input type="radio" name="choix" value="choix2"> Option 2
                 </label>
                 <button type="button" onclick="traiterChoix()">Valider</button>
-            </div>
-        `;
+            </div>`
+                ;
+
         });
     });
 
-    loadData(); // Appeler loadData() ici pour charger les données avant de cliquer sur le bouton
 }
+loadData()
 
 
 
