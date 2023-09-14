@@ -22,7 +22,7 @@ function displayContent() {
 
         let info = document.querySelector(".navbar");
         info.innerHTML = `
-        <div class="">
+        <div>
             <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
         </div>
         `;
