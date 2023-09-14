@@ -40,10 +40,12 @@ function displayContent() {
                 <label>
                     <img src="${bouffe[n].url}" alt="image">
                     <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
+                    <p> ${bouffe[n].nom}</p>
                 </label>
                 <label>
                     <img src="${bouffe[n + 1].url}" alt="image">
                     <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
+                    <p> ${bouffe[n + 1].nom}</p>
                 </label>
                 <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
             </div>`
