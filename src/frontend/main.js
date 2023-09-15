@@ -134,28 +134,58 @@ function calculerCaracteristiques() {
     console.log(player);
 }
 
-
 function traiterChoix() {
-    let n = numerosDejaUtilises[numerosDejaUtilises.length - 1];
-    bouffe[n].prix = Number(bouffe[n].prix);
-    bouffe[n].poids = Number(bouffe[n].poids);
-    bouffe[n + 1].prix = Number(bouffe[n + 1].prix);
-    bouffe[n + 1].poids = Number(bouffe[n + 1].poids);
-    if (document.querySelector('input[name="choix"]:checked').value === 'choix1') {
-        player.money -= bouffe[n].prix;
-        player.poid -= bouffe[n].poids;
-    } else if (document.querySelector('input[name="choix"]:checked').value === 'choix2') {
-        player.money -= bouffe[n + 1].prix;
-        player.poid += bouffe[n + 1].poids;
-    }
+    let radioChoix = document.querySelector('input[name="choix"]:checked');
+    if (radioChoix) {
+        let n = numerosDejaUtilises[numerosDejaUtilises.length - 1];
+        bouffe[n].prix = Number(bouffe[n].prix);
+        bouffe[n].poids = Number(bouffe[n].poids);
+        bouffe[n + 1].prix = Number(bouffe[n + 1].prix);
+        bouffe[n + 1].poids = Number(bouffe[n + 1].poids);
 
-    // Mettre à jour l'affichage du joueur
-    let info = document.querySelector(".navbar");
-    info.innerHTML = `
-    <div>
-        <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
-    </div>
-    `;
+        if (radioChoix.value === 'choix1') {
+            player.money -= bouffe[n].prix;
+            player.poid -= bouffe[n].poids;
+        } else if (radioChoix.value === 'choix2') {
+            player.money -= bouffe[n + 1].prix;
+            player.poid += bouffe[n + 1].poids;
+        }
+
+        // Mettre à jour l'affichage du joueur
+        let info = document.querySelector(".navbar");
+        info.innerHTML = `
+        <div>
+            <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
+        </div>
+        `;
+
+        let form = document.querySelector(".formulaire");
+        form.innerHTML = "";
+        bouffe.forEach(_ => {
+            form.innerHTML = `
+            <div>
+                <p>Voici la description de la situation.</p>
+                <p>Choisissez entre les deux possibilités :</p>
+                <div class="label">
+                    <label class="label1">
+                        <img class ="img1" src="${bouffe[n].url}" alt="image">
+                        <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
+                        <p> ${bouffe[n].description}</p>
+                        <p> ${bouffe[n].prix}$</p>
+                    </label>
+                    <label class="label2">
+                        <img class ="img2" src="${bouffe[n + 1].url}" alt="image">
+                        <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
+                        <p> ${bouffe[n + 1].description}</p>
+                        <p> ${bouffe[n + 1].prix}$</p>
+                    </label>
+                </div>
+                <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
+            </div>`
+        });
+    } else {
+        console.error("Aucune option choisie.");
+    }
 }
 
 let numerosDejaUtilises = [];
