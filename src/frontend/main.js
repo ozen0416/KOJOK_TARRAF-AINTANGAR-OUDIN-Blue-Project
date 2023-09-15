@@ -38,14 +38,14 @@ function displayContent() {
                 <p>Voici la description de la situation.</p>
                 <p>Choisissez entre les deux possibilités :</p>
                 <div class="label">
-                    <label>
-                        <img src="${bouffe[n].url}" alt="image">
+                    <label class="label1">
+                        <img class ="img1" src="${bouffe[n].url}" alt="image">
                         <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
                         <p> ${bouffe[n].description}</p>
                         <p> ${bouffe[n].prix}$</p>
                     </label>
-                    <label>
-                        <img src="${bouffe[n + 1].url}" alt="image">
+                    <label class="label2">
+                        <img class ="img2" src="${bouffe[n + 1].url}" alt="image">
                         <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
                         <p> ${bouffe[n + 1].description}</p>
                         <p> ${bouffe[n + 1].prix}$</p>
@@ -61,7 +61,8 @@ function displayContent() {
         valider.addEventListener("click", function () {
             console.log(numerosDejaUtilises);
             traiterChoix();
-            randomInt();    
+            randomInt();
+            console.log(player);
         });
     });
 }
@@ -104,7 +105,11 @@ function calculerCaracteristiques() {
     let objet = document.querySelector('input[name="objet"]:checked').value;
     let questions = document.querySelectorAll('.question input:checked');
     verifierCaracteres(document.getElementById("nom"));
-    player = new Player(nom.value, argent, poids, [])
+    player = new Player(nom.value, argent, poids, []);
+
+    // Convertir le poids et l'argent en nombre
+    player.poid = Number(player.poid);
+    player.money = Number(player.money);
 
     questions.forEach(function (question) {
         if (question.value === 'positif') {
@@ -126,16 +131,59 @@ function calculerCaracteristiques() {
     }
 
     console.log(player);
-
 }
 
 function traiterChoix() {
-    if(document.querySelector('input[name="choix"]:checked').value === 'choix1'){
-        player.money -= bouffe[0].prix;
-        player.poid -= bouffe[0].poids;
-    } else if(document.querySelector('input[name="choix"]:checked').value === 'choix2'){
-        player.money -= bouffe[1].prix;
-        player.poid += bouffe[1].poids;
+    let radioChoix = document.querySelector('input[name="choix"]:checked');
+    if (radioChoix) {
+        let n = numerosDejaUtilises[numerosDejaUtilises.length - 1];
+        bouffe[n].prix = Number(bouffe[n].prix);
+        bouffe[n].poids = Number(bouffe[n].poids);
+        bouffe[n + 1].prix = Number(bouffe[n + 1].prix);
+        bouffe[n + 1].poids = Number(bouffe[n + 1].poids);
+
+        if (radioChoix.value === 'choix1') {
+            player.money -= bouffe[n].prix;
+            player.poid -= bouffe[n].poids;
+        } else if (radioChoix.value === 'choix2') {
+            player.money -= bouffe[n + 1].prix;
+            player.poid += bouffe[n + 1].poids;
+        }
+
+        // Mettre à jour l'affichage du joueur
+        let info = document.querySelector(".navbar");
+        info.innerHTML = `
+        <div>
+            <p style="color:white">${player.name} ${player.poid}kg ${player.money}$</p>
+        </div>
+        `;
+
+        let form = document.querySelector(".formulaire");
+        form.innerHTML = "";
+        bouffe.forEach(_ => {
+            form.innerHTML = `
+            <div>
+                <p>Voici la description de la situation.</p>
+                <p>Choisissez entre les deux possibilités :</p>
+                <div class="label">
+                    <label class="label1">
+                        <img class ="img1" src="${bouffe[n].url}" alt="image">
+                        <input type="radio" name="choix" value="choix1"> ${bouffe[n].nom}
+                        <p> ${bouffe[n].description}</p>
+                        <p> ${bouffe[n].prix}$</p>
+                    </label>
+                    <label class="label2">
+                        <img class ="img2" src="${bouffe[n + 1].url}" alt="image">
+                        <input type="radio" name="choix" value="choix2"> ${bouffe[n + 1].nom}
+                        <p> ${bouffe[n + 1].description}</p>
+                        <p> ${bouffe[n + 1].prix}$</p>
+                    </label>
+                </div>
+                <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
+            </div>`
+        });
+    } else {
+        console.error("Aucune option choisie.");
     }
 }
 
