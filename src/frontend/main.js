@@ -53,7 +53,6 @@ function displayContent() {
                 </div>
                 <button class="valider" type="button" onclick="traiterChoix()">Valider</button>
             </div>`
-                ;
         });
         const valider = document.querySelector(".valider")
 
